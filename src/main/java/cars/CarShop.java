@@ -41,7 +41,12 @@ public class CarShop {
 
     public List<Car> carsWithBrand(String brand) {
         List<Car> brandedCars = new ArrayList<>();
-        if ()
+        for (Car car : cars) {
+            if (car.getBrand().equalsIgnoreCase(brand)) {   //Don't like the idea of case-sensitivity here :)
+                brandedCars.add(car);
+            }
+        }
+        return brandedCars;
     }
 
     public String getName() {
