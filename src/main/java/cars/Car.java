@@ -14,7 +14,7 @@ public class Car {
     }
 
     public void decreasePrice(int percent) {
-        double doublePrice = (100 - percent) * price;
+        double doublePrice = (1d - percent / 100d) * price;
         this.price = (int) doublePrice;
     }
 

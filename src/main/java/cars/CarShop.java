@@ -21,12 +21,27 @@ public class CarShop {
         else return false;
     }
 
-    public double sumCarPrice() {
+    public double sumCarPrice() {                   //should it be int type?
         double allCarsPrice = 0;
         for (Car actualCar : cars) {
             allCarsPrice += actualCar.getPrice();
         }
         return allCarsPrice;
+    }
+
+    public int numberOfCarsCheaperThan(int price) {
+        int counterOfCars = 0;
+        for (Car carPrices : cars) {
+            if (carPrices.getPrice() <= price) {
+                counterOfCars++;
+            }
+        }
+        return counterOfCars;
+    }
+
+    public List<Car> carsWithBrand(String brand) {
+        List<Car> brandedCars = new ArrayList<>();
+        if ()
     }
 
     public String getName() {
